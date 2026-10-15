@@ -1,12 +1,175 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><title>Privacy Policy | RoShelf</title><meta name="description" content="Privacy Policy do RoShelf, extensão independente de listas de jogos Roblox."><link rel="stylesheet" href="style.css"></head><body><header><div><a class="brand" href="index-en.html">RoShelf</a><nav aria-label="Navigation"><a  href="index-en.html">Home</a><a class=current href="privacy.html">Privacy</a><a  href="terms.html">Terms</a><a  href="index.html">Português</a></nav></div></header><main><p class="eyebrow">Draft for review · October 15, 2026</p><h1>Privacy Policy</h1><p class="lead">RoShelf allows users to organize, save, and display voluntary Roblox game lists. This policy explains the information involved and how it is used.</p><aside class="note">
-<h2>1. Controller and contact</h2><p>RoShelf is an independent project. For privacy questions, access, corrections, and deletion requests, contact <strong>[COLOQUE_SEU_EMAIL_PUBLICO_AQUI]</strong>.</p>
-<h2>2. Information processed</h2><ul><li><strong>Public Roblox account identity:</strong> numeric user ID, username, display name, and avatar image URL obtained after OAuth authorization.</li><li><strong>User-selected lists:</strong> game/universe and place IDs, game names, icon URLs, categories, and creation dates.</li><li><strong>Authorization:</strong> a short-lived OAuth access token stored in the extension's <code>chrome.storage.session</code> and sent to the server to authenticate changes. The current version does not store this token in the database and discards refresh tokens.</li><li><strong>Profile and game queries:</strong> when a Roblox profile is visited, the extension extracts its ID from the URL to request that user's list. Game searches are sent to Roblox services.</li><li><strong>Technical records:</strong> infrastructure providers may process connection and error logs under their own policies.</li></ul>
-<h2>3. Purposes</h2><p>To identify the account allowed to edit a list; store that account's chosen ratings; show ratings to other extension users on Roblox profiles; retrieve public game metadata; and maintain service functionality and security.</p>
-<h2>4. Lists are public by default</h2><p><strong>Once saved, your game ratings are public to users of RoShelf who visit your Roblox profile.</strong> Categories and game selections are not private. The current version has no setting to make an entire list private. Public lists can also be queried without authentication via the API.</p>
-<h2>5. Sharing and service providers</h2><p>RoShelf uses Roblox OAuth, game APIs, and public profile pages, and uses <strong>Supabase</strong> for database and API hosting. Data needed for these functions travels between the extension, Roblox, and Supabase. Processing may take place outside your country. The current RoShelf code does not sell user lists to advertisers or implement advertising trackers.</p>
-<h2>6. Storage and security</h2><p>Game lists are stored in an online database. The server verifies OAuth access tokens with Roblox before allowing additions or removals. RoShelf does not request Roblox passwords or read the <code>.ROBLOSECURITY</code> cookie. Access tokens are not exposed to scripts injected into Roblox pages. No system can guarantee absolute security.</p>
-<h2>7. Retention and deletion</h2><p>Records remain until removed or a deletion request is fulfilled. Authenticated users can remove individual games. <strong>Version 0.10 does not yet offer automatic deletion of the entire list/account.</strong> To request full deletion or correction, contact <strong>[COLOQUE_SEU_EMAIL_PUBLICO_AQUI]</strong>. The operator should verify account ownership by suitable means without asking for a Roblox password. Revoking Roblox OAuth authorization does not automatically delete stored RoShelf lists.</p>
-<h2>8. Your choices and rights</h2><p>You can inspect your displayed information, change categories, remove individual games, and request access, correction, or deletion of data linked to your ID, under applicable law. A full deletion procedure must be operational before public launch.</p>
-<h2>9. Young users</h2><p>RoShelf relies on Roblox's OAuth eligibility rules, currently requiring accounts aged 13+. Applicable privacy protections for minors still apply. Do not use RoShelf to publish sensitive personal details about yourself or others.</p>
-<h2>10. Updates</h2><p>This policy will be updated if RoShelf's practices, processed data, or providers change, and significant changes should be communicated appropriately.</p>
-</main><footer>RoShelf is an independent extension and is not affiliated with, sponsored by, or endorsed by Roblox Corporation.</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="index,follow" name="robots"/>
+  <title>
+   Privacy Policy | RoShelf
+  </title>
+  <meta content="How RoShelf processes Roblox profiles and voluntarily shared game lists." name="description"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <div>
+    <a class="brand" href="index-en.html">
+     RoShelf
+    </a>
+    <nav aria-label="Navigation">
+     <a href="index-en.html">
+      Home
+     </a>
+     <a class="current" href="privacy.html">
+      Privacy
+     </a>
+     <a href="terms.html">
+      Terms
+     </a>
+     <a href="index.html">
+      Português
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main>
+   <p class="eyebrow">
+    Updated October 15, 2026
+   </p>
+   <h1>
+    Privacy Policy
+   </h1>
+   <p class="lead">
+    RoShelf allows users to organize, save, and display voluntary Roblox game lists. This policy explains the information involved and how it is used.
+   </p>
+   <h2>
+    1. Controller and contact
+   </h2>
+   <p>
+    RoShelf is an independent project. For privacy questions, access, corrections, and deletion requests, contact
+    <strong>
+     <a href="mailto:doldiecontato@gmail.com">
+      doldiecontato@gmail.com
+     </a>
+    </strong>
+    .
+   </p>
+   <h2>
+    2. Information processed
+   </h2>
+   <ul>
+    <li>
+     <strong>
+      Public Roblox account identity:
+     </strong>
+     numeric user ID, username, display name, and avatar image URL obtained after OAuth authorization.
+    </li>
+    <li>
+     <strong>
+      User-selected lists:
+     </strong>
+     game/universe and place IDs, game names, icon URLs, categories, and creation dates.
+    </li>
+    <li>
+     <strong>
+      Authorization:
+     </strong>
+     a short-lived OAuth access token stored in the extension's
+     <code>
+      chrome.storage.session
+     </code>
+     and sent to the server to authenticate changes. The current version does not store this token in the database and discards refresh tokens.
+    </li>
+    <li>
+     <strong>
+      Profile and game queries:
+     </strong>
+     when a Roblox profile is visited, the extension extracts its ID from the URL to request that user's list. Game searches are sent to Roblox services.
+    </li>
+    <li>
+     <strong>
+      Technical records:
+     </strong>
+     infrastructure providers may process connection and error logs under their own policies.
+    </li>
+   </ul>
+   <h2>
+    3. Purposes
+   </h2>
+   <p>
+    To identify the account allowed to edit a list; store that account's chosen ratings; show ratings to other extension users on Roblox profiles; retrieve public game metadata; and maintain service functionality and security.
+   </p>
+   <h2>
+    4. Lists are public by default
+   </h2>
+   <p>
+    <strong>
+     Once saved, your game ratings are public to users of RoShelf who visit your Roblox profile.
+    </strong>
+    Categories and game selections are not private. The current version has no setting to make an entire list private. Public lists can also be queried without authentication via the API.
+   </p>
+   <h2>
+    5. Sharing and service providers
+   </h2>
+   <p>
+    RoShelf uses Roblox OAuth, game APIs, and public profile pages, and uses
+    <strong>
+     Supabase
+    </strong>
+    for database and API hosting. Data needed for these functions travels between the extension, Roblox, and Supabase. Processing may take place outside your country. The current RoShelf code does not sell user lists to advertisers or implement advertising trackers.
+   </p>
+   <h2>
+    6. Storage and security
+   </h2>
+   <p>
+    Game lists are stored in an online database. The server verifies OAuth access tokens with Roblox before allowing additions or removals. RoShelf does not request Roblox passwords or read the
+    <code>
+     .ROBLOSECURITY
+    </code>
+    cookie. Access tokens are not exposed to scripts injected into Roblox pages. No system can guarantee absolute security.
+   </p>
+   <h2>
+    7. Retention and deletion
+   </h2>
+   <p>
+    Records remain until removed or a deletion request is fulfilled. Authenticated users can remove individual games.
+    <strong>
+     Version 0.10 does not yet offer automatic deletion of the entire list/account.
+    </strong>
+    To request full deletion or correction, contact
+    <strong>
+     <a href="mailto:doldiecontato@gmail.com">
+      doldiecontato@gmail.com
+     </a>
+    </strong>
+    . The operator should verify account ownership by suitable means without asking for a Roblox password. Revoking Roblox OAuth authorization does not automatically delete stored RoShelf lists.
+   </p>
+   <h2>
+    8. Your choices and rights
+   </h2>
+   <p>
+    You can review displayed information, change categories, and remove games. To request access, correction, or full deletion of information linked to your Roblox account, contact us using the email address listed above. We may need to verify account ownership, without requiring your password.
+   </p>
+   <h2>
+    9. Young users
+   </h2>
+   <p>
+    RoShelf relies on Roblox's OAuth eligibility rules, currently requiring accounts aged 13+. Applicable privacy protections for minors still apply. Do not use RoShelf to publish sensitive personal details about yourself or others.
+   </p>
+   <h2>
+    10. Updates
+   </h2>
+   <p>
+    This policy will be updated if RoShelf's practices, processed data, or providers change, and significant changes should be communicated appropriately.
+   </p>
+  </main>
+  <footer>
+   RoShelf is an independent extension and is not affiliated with, sponsored by, or endorsed by Roblox Corporation.
+   ·
+   <a href="mailto:doldiecontato@gmail.com">
+    doldiecontato@gmail.com
+   </a>
+  </footer>
+ </body>
+</html>
+
