@@ -1,83 +1,562 @@
+
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <meta content="index,follow" name="robots"/>
-  <title>
-   Home | RoShelf
-  </title>
-  <meta content="RoShelf is an independent browser extension for organizing Roblox games and viewing shared lists." name="description"/>
-  <link href="style.css" rel="stylesheet"/>
- </head>
- <body>
-  <header>
-   <div>
-    <a class="brand" href="index-en.html">
-     RoShelf
-    </a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RoShelf — Organize Your Roblox Games</title>
+  <meta name="description" content="Install RoShelf to organize Roblox games into categories and share your lists on your profile.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .hero {
+      padding: 36px 0 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 7vw, 60px);
+      letter-spacing: -2px;
+    }
+
+    .hero .lead {
+      max-width: 660px;
+      font-size: 18px;
+    }
+
+    .version {
+      display: inline-block;
+      padding: 5px 11px;
+      background: #25262c;
+      border: 1px solid #414249;
+      border-radius: 6px;
+      color: #d8d9dd;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 28px 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background .2s;
+    }
+
+    .btn-primary {
+      background: #eeeeef;
+      color: #16171a;
+    }
+
+    .btn-primary:hover {
+      background: #cfd0d4;
+      color: #16171a;
+    }
+
+    .btn-secondary {
+      background: #24252b;
+      color: #eeeeef;
+      border: 1px solid #45464c;
+    }
+
+    .btn-secondary:hover {
+      background: #34353b;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 24px 0 36px;
+    }
+
+    .feature {
+      background: #1b1c21;
+      border: 1px solid #303137;
+      border-radius: 9px;
+      padding: 19px;
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .feature p {
+      color: #b6b7bd;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .steps {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 17px;
+      background: #1b1c21;
+      border: 1px solid #303137;
+      border-radius: 8px;
+    }
+
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 34px;
+      height: 34px;
+      border-radius: 7px;
+      background: #33343b;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .step p {
+      margin: 0;
+      color: #b6b7bd;
+      font-size: 14px;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 17px;
+    }
+
+    .category {
+      background: #25262c;
+      border: 1px solid #3c3d44;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #e6e7e9;
+    }
+
+    .notice {
+      background: #25231c;
+      border: 1px solid #5b5234;
+      border-radius: 8px;
+      padding: 17px;
+      margin: 26px 0;
+      color: #e8dbbd;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .notice p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .install-bottom {
+      text-align: center;
+      background: #1b1c21;
+      border: 1px solid #303137;
+      padding: 30px 20px;
+      border-radius: 10px;
+      margin-top: 35px;
+    }
+
+    .install-bottom .buttons {
+      justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 15px;
+      }
+
+      .buttons .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <a class="brand" href="index-en.html">RoShelf</a>
+
     <nav aria-label="Navigation">
-     <a class="current" href="index-en.html">
-      Home
-     </a>
-     <a href="privacy.html">
-      Privacy
-     </a>
-     <a href="terms.html">
-      Terms
-     </a>
-     <a href="index.html">
-      Português
-     </a>
+      <a class="current" href="index-en.html">Home</a>
+      <a href="#installation">Installation</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="index.html">Português</a>
     </nav>
-   </div>
-  </header>
-  <main>
-   <p class="eyebrow">
-    INDEPENDENT ROBLOX BROWSER EXTENSION
-   </p>
-   <h1>
-    RoShelf
-   </h1>
-   <p class="lead">
-    An independent extension to rate Roblox games and share your choices on Roblox profiles.
-   </p>
-   <div class="panel">
-    <strong>
-     Project documents
-    </strong>
-    <p class="muted">
-     Learn how RoShelf works and how your data is handled.
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <p class="eyebrow">
+      INDEPENDENT ROBLOX BROWSER EXTENSION
     </p>
-    <div class="links">
-     <a href="privacy.html">
-      Privacy Policy
-     </a>
-     <a href="terms.html">
-      Terms of Use
-     </a>
+
+    <span class="version">v0.10 — Public Beta</span>
+
+    <h1>
+      Your games.<br>
+      Your categories.<br>
+      Your RoShelf.
+    </h1>
+
+    <p class="lead">
+      Organize your favorite Roblox games,
+      create personalized lists, and share
+      your choices directly on your profile.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-primary"
+         href="https://github.com/Doudks/roshelf/releases/tag/v0.10.0"
+         target="_blank"
+         rel="noopener noreferrer">
+        ↓ Download RoShelf
+      </a>
+
+      <a class="btn btn-secondary" href="#installation">
+        How to install
+      </a>
     </div>
-   </div>
-   <p>
-    RoShelf uses Roblox OAuth 2.0 to identify the account authorized to edit each list. Game selections are saved on Supabase and are publicly viewable through the extension.
-   </p>
-   <p class="muted">
-    This is an informational website, not a sign-in page. Never enter your password or tokens here.
-   </p>
-   <p class="muted">
+
+    <p class="muted">
+      Free • Chrome and Brave • Windows, Linux and macOS
+    </p>
+
+  </section>
+
+
+  <!-- FEATURES -->
+
+  <h2>What is RoShelf?</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature">
+      <strong>Organize your games</strong>
+      <p>
+        Sort Roblox games into six categories
+        based on your personal preferences.
+      </p>
+    </div>
+
+    <div class="feature">
+      <strong>Show your lists on your profile</strong>
+      <p>
+        Your lists appear directly on your
+        Roblox profile for other users
+        who have the extension installed.
+      </p>
+    </div>
+
+    <div class="feature">
+      <strong>Online synchronization</strong>
+      <p>
+        Your game lists are saved online
+        and are not tied to a single computer.
+      </p>
+    </div>
+
+    <div class="feature">
+      <strong>Official Roblox login</strong>
+      <p>
+        Connect through Roblox's official
+        authorization system.
+        RoShelf never asks for your password.
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- CATEGORIES -->
+
+  <h2>Six categories. Your own style.</h2>
+
+  <p class="muted">
+    Sort every game based on how much
+    you actually want to play it.
+  </p>
+
+  <div class="categories">
+
+    <span class="category">
+      Really want to play
+    </span>
+
+    <span class="category">
+      Would play a little
+    </span>
+
+    <span class="category">
+      Would play reluctantly
+    </span>
+
+    <span class="category">
+      Might give it a try
+    </span>
+
+    <span class="category">
+      Once in a blue moon
+    </span>
+
+    <span class="category">
+      Don't even ask me
+    </span>
+
+  </div>
+
+
+  <!-- INSTALLATION -->
+
+  <section id="installation">
+
+    <h2>How to install RoShelf</h2>
+
+    <p class="muted">
+      The current beta requires manual installation.
+      Follow these steps using Google Chrome or Brave.
+    </p>
+
+    <div class="steps">
+
+      <div class="step">
+        <span class="number">1</span>
+        <div>
+          <strong>Download RoShelf</strong>
+          <p>
+            Click "Download RoShelf" above.
+            On the GitHub release page,
+            find the "Assets" section
+            and download the v0.10 ZIP file.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="number">2</span>
+        <div>
+          <strong>Extract the ZIP file</strong>
+          <p>
+            Extract the ZIP into a permanent folder.
+            Do not delete or move this folder
+            after installing the extension.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="number">3</span>
+        <div>
+          <strong>Open the extensions page</strong>
+          <p>
+            In Chrome, open
+            <code>chrome://extensions</code>.
+            In Brave, open
+            <code>brave://extensions</code>.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="number">4</span>
+        <div>
+          <strong>Enable Developer Mode</strong>
+          <p>
+            Turn on the "Developer mode"
+            switch on the extensions page.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="number">5</span>
+        <div>
+          <strong>Load the extension</strong>
+          <p>
+            Click "Load unpacked" and
+            select the extracted folder
+            containing the
+            <code>manifest.json</code> file.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="number">6</span>
+        <div>
+          <strong>Open Roblox</strong>
+          <p>
+            Visit roblox.com.
+            Open the Roblox sidebar
+            and click "RoShelf".
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="number">7</span>
+        <div>
+          <strong>Connect your account</strong>
+          <p>
+            Click the connect button
+            and authorize RoShelf through
+            the official Roblox login flow.
+            You can then start organizing
+            games into your lists.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BETA NOTICE -->
+
+  <div class="notice">
+
+    <strong>Notice: Beta version</strong>
+
+    <p>
+      The RoShelf OAuth application
+      is awaiting Roblox approval.
+      Until it is approved,
+      new users may be unable
+      to complete authorization.
+      The extension is currently
+      available for testing.
+    </p>
+
+  </div>
+
+
+  <!-- PRIVACY -->
+
+  <h2>Privacy and security</h2>
+
+  <p>
+    RoShelf uses Roblox OAuth 2.0
+    to identify users and protect
+    game list editing.
+  </p>
+
+  <p>
+    The application may store your
+    Roblox user ID, username,
+    display name, avatar,
+    and categorized games
+    using Supabase.
+    Lists are public to users
+    who have the extension installed.
+  </p>
+
+  <p class="muted">
+    RoShelf never asks for your Roblox password.
+    Authorization takes place through
+    Roblox's official system.
+  </p>
+
+  <div class="links">
+
+    <a href="privacy.html">
+      Privacy Policy
+    </a>
+
+    <a href="terms.html">
+      Terms of Service
+    </a>
+
+  </div>
+
+
+  <!-- FINAL DOWNLOAD -->
+
+  <section class="install-bottom">
+
+    <h2 style="border:0; padding:0; margin:0;">
+      Ready to organize your games?
+    </h2>
+
+    <p class="muted">
+      Download RoShelf and start building
+      your own personalized game lists.
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn btn-primary"
+         href="https://github.com/Doudks/roshelf/releases/tag/v0.10.0"
+         target="_blank"
+         rel="noopener noreferrer">
+        ↓ Download RoShelf v0.10
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <p class="muted" style="margin-top:30px;">
     Contact:
     <a href="mailto:doldiecontato@gmail.com">
-     doldiecontato@gmail.com
+      doldiecontato@gmail.com
     </a>
-   </p>
-  </main>
-  <footer>
-   RoShelf is an independent extension and is not affiliated with, sponsored by, or endorsed by Roblox Corporation.
-   ·
-   <a href="mailto:doldiecontato@gmail.com">
-    doldiecontato@gmail.com
-   </a>
-  </footer>
- </body>
-</html>
+  </p>
 
+</main>
+
+<footer>
+  RoShelf is an independent project
+  and is not affiliated with,
+  sponsored by, or endorsed by
+  Roblox Corporation.
+  <br>
+  Contact:
+  <a href="mailto:doldiecontato@gmail.com">
+    doldiecontato@gmail.com
+  </a>
+</footer>
+
+</body>
+</html>
