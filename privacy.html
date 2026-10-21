@@ -1,175 +1,142 @@
 <!DOCTYPE html>
+
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <meta content="index,follow" name="robots"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="index,follow" name="robots"/>
+<title>
    Privacy Policy | RoShelf
   </title>
-  <meta content="How RoShelf processes Roblox profiles and voluntarily shared game lists." name="description"/>
-  <link href="style.css" rel="stylesheet"/>
- </head>
- <body>
-  <header>
-   <div>
-    <a class="brand" href="index-en.html">
+<meta content="How RoShelf processes Roblox profiles and voluntarily shared game lists." name="description"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<div>
+<a class="brand" href="index-en.html">
      RoShelf
     </a>
-    <nav aria-label="Navigation">
-     <a href="index-en.html">
+<nav aria-label="Navigation">
+<a href="index-en.html">
       Home
      </a>
-     <a class="current" href="privacy.html">
+<a class="current" href="privacy.html">
       Privacy
      </a>
-     <a href="terms.html">
+<a href="terms.html">
       Terms
      </a>
-     <a href="index.html">
+<a href="index.html">
       Português
      </a>
-    </nav>
-   </div>
-  </header>
-  <main>
-   <p class="eyebrow">
-    Updated October 15, 2026
-   </p>
-   <h1>
+</nav>
+</div>
+</header>
+<main>
+<p class="eyebrow">Updated October 21, 2026</p>
+<h1>
     Privacy Policy
    </h1>
-   <p class="lead">
+<p class="lead">
     RoShelf allows users to organize, save, and display voluntary Roblox game lists. This policy explains the information involved and how it is used.
    </p>
-   <h2>
+<h2>
     1. Controller and contact
    </h2>
-   <p>
+<p>
     RoShelf is an independent project. For privacy questions, access, corrections, and deletion requests, contact
     <strong>
-     <a href="mailto:doldiecontato@gmail.com">
+<a href="mailto:doldiecontato@gmail.com">
       doldiecontato@gmail.com
      </a>
-    </strong>
+</strong>
     .
    </p>
-   <h2>
+<h2>
     2. Information processed
    </h2>
-   <ul>
-    <li>
-     <strong>
+<ul>
+<li>
+<strong>
       Public Roblox account identity:
      </strong>
      numeric user ID, username, display name, and avatar image URL obtained after OAuth authorization.
     </li>
-    <li>
-     <strong>
-      User-selected lists:
-     </strong>
-     game/universe and place IDs, game names, icon URLs, categories, and creation dates.
-    </li>
-    <li>
-     <strong>
-      Authorization:
-     </strong>
-     a short-lived OAuth access token stored in the extension's
-     <code>
-      chrome.storage.session
-     </code>
-     and sent to the server to authenticate changes. The current version does not store this token in the database and discards refresh tokens.
-    </li>
-    <li>
-     <strong>
+<li><strong>User-selected lists:</strong> game/universe and place IDs, game names, image URLs, custom categories, preference ratings from 1 to 5, custom order, featured games, privacy settings, and creation dates.</li>
+<li><strong>Authorization:</strong> short-lived OAuth access tokens are kept in the extension session. A refresh token is stored in local browser extension storage with access restricted to trusted extension contexts, allowing the sign-in session to be renewed. OAuth tokens are not stored in the game-list database.</li>
+<li>
+<strong>
       Profile and game queries:
      </strong>
      when a Roblox profile is visited, the extension extracts its ID from the URL to request that user's list. Game searches are sent to Roblox services.
     </li>
-    <li>
-     <strong>
+<li>
+<strong>
       Technical records:
      </strong>
      infrastructure providers may process connection and error logs under their own policies.
     </li>
-   </ul>
-   <h2>
+</ul>
+<h2>
     3. Purposes
    </h2>
-   <p>
+<p>
     To identify the account allowed to edit a list; store that account's chosen ratings; show ratings to other extension users on Roblox profiles; retrieve public game metadata; and maintain service functionality and security.
    </p>
-   <h2>
+<h2>
     4. Lists are public by default
    </h2>
-   <p>
-    <strong>
-     Once saved, your game ratings are public to users of RoShelf who visit your Roblox profile.
-    </strong>
-    Categories and game selections are not private. The current version has no setting to make an entire list private. Public lists can also be queried without authentication via the API.
-   </p>
-   <h2>
+<p>Categories are public by default but may be marked private. Public API queries and visitors do not receive the names, games, or statistics of private categories. The authenticated owner can access and edit their own private categories. Public featured-game displays and imports from other profiles only include games in public categories.</p>
+<h2>
     5. Sharing and service providers
    </h2>
-   <p>
+<p>
     RoShelf uses Roblox OAuth, game APIs, and public profile pages, and uses
     <strong>
      Supabase
     </strong>
     for database and API hosting. Data needed for these functions travels between the extension, Roblox, and Supabase. Processing may take place outside your country. The current RoShelf code does not sell user lists to advertisers or implement advertising trackers.
    </p>
-   <h2>
+<h2>
     6. Storage and security
    </h2>
-   <p>
+<p>
     Game lists are stored in an online database. The server verifies OAuth access tokens with Roblox before allowing additions or removals. RoShelf does not request Roblox passwords or read the
     <code>
      .ROBLOSECURITY
     </code>
     cookie. Access tokens are not exposed to scripts injected into Roblox pages. No system can guarantee absolute security.
    </p>
-   <h2>
+<h2>
     7. Retention and deletion
    </h2>
-   <p>
-    Records remain until removed or a deletion request is fulfilled. Authenticated users can remove individual games.
-    <strong>
-     Version 0.10 does not yet offer automatic deletion of the entire list/account.
-    </strong>
-    To request full deletion or correction, contact
-    <strong>
-     <a href="mailto:doldiecontato@gmail.com">
-      doldiecontato@gmail.com
-     </a>
-    </strong>
-    . The operator should verify account ownership by suitable means without asking for a Roblox password. Revoking Roblox OAuth authorization does not automatically delete stored RoShelf lists.
-   </p>
-   <h2>
+<p>Game-list records remain until removed or a deletion request is fulfilled. Authenticated users can remove games and empty categories. There is not yet a built-in option to delete the entire RoShelf account and all its data. To request full deletion or correction, contact <a href="mailto:doldiecontato@gmail.com">doldiecontato@gmail.com</a>. Ownership may need to be verified without requesting a Roblox password. Revoking OAuth authorization does not automatically delete saved game lists.</p>
+<h2>
     8. Your choices and rights
    </h2>
-   <p>
+<p>
     You can review displayed information, change categories, and remove games. To request access, correction, or full deletion of information linked to your Roblox account, contact us using the email address listed above. We may need to verify account ownership, without requiring your password.
    </p>
-   <h2>
+<h2>
     9. Young users
    </h2>
-   <p>
+<p>
     RoShelf relies on Roblox's OAuth eligibility rules, currently requiring accounts aged 13+. Applicable privacy protections for minors still apply. Do not use RoShelf to publish sensitive personal details about yourself or others.
    </p>
-   <h2>
+<h2>
     10. Updates
    </h2>
-   <p>
+<p>
     This policy will be updated if RoShelf's practices, processed data, or providers change, and significant changes should be communicated appropriately.
    </p>
-  </main>
-  <footer>
+</main>
+<footer>
    RoShelf is an independent extension and is not affiliated with, sponsored by, or endorsed by Roblox Corporation.
    ·
    <a href="mailto:doldiecontato@gmail.com">
     doldiecontato@gmail.com
    </a>
-  </footer>
- </body>
+</footer>
+</body>
 </html>
-
