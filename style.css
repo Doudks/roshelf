@@ -46,3 +46,14 @@ main>ul{padding-left:22px}main>ul li{margin:9px 0}main:not(:has(.hero)) h2{font-
 main:not(:has(.hero)) h1{font-size:clamp(29px,5vw,39px);letter-spacing:-.8px}
 @media(max-width:760px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.step-list{grid-template-columns:1fr}}
 @media(max-width:540px){header>div{align-items:flex-start;flex-direction:column;gap:9px;padding:12px 17px}nav{gap:12px;font-size:12px}main{padding:26px 17px 52px}.feature-grid{grid-template-columns:1fr}.feature{min-height:auto}.actions{display:grid;grid-template-columns:1fr}.action{width:100%}h1{letter-spacing:-1.4px}.lead{font-size:15px}.hero-preview{margin-top:20px}}
+
+/* Responsive, privacy-enhanced YouTube tutorial embed. */
+.tutorial-video{margin:25px 0 26px;padding:18px;border:1px solid #3a3b45;border-radius:12px;background:linear-gradient(155deg,#25242c,#1a1b20);scroll-margin-top:94px}
+.tutorial-video-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 12px}
+.tutorial-video-head h3{margin:0;font-size:17px}
+.tutorial-video-head a{font-size:12px;color:#e7c791;text-decoration:none;font-weight:700}
+.tutorial-video-head a:hover{text-decoration:underline}
+.video-frame{width:100%;max-width:870px;aspect-ratio:16 / 9;overflow:hidden;border-radius:9px;background:#09090c;border:1px solid #42434a;box-shadow:0 10px 34px #0005;margin-inline:auto}
+.video-frame iframe{display:block;width:100%;height:100%;border:0}
+.video-caption{font-size:12px;color:#adb0bb;margin:13px 1px 0}
+@media(max-width:540px){.tutorial-video{padding:11px}.tutorial-video-head{align-items:flex-start}.tutorial-video-head h3{font-size:15px}}
